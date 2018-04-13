@@ -1,0 +1,24 @@
+verbose: false
+instrumentation:
+    root: ./src
+    extensions:
+        - .js
+    default-excludes: true
+    excludes:
+        - coverage/**
+        - nodule_modules/**
+    embed-source: false
+    variable: __coverage__
+    compact: true
+    preserve-comments: false
+    complete-copy: false
+    save-baseline: false
+    baseline-file: ./coverage/coverage-baseline.json
+    include-all-sources: true
+    include-pid: false
+    es-modules: false
+reporting:
+    print: summary
+    reports:
+        - html
+    dir: ./coverage

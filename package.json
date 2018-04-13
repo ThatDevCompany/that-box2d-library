@@ -1,0 +1,29 @@
+{
+    "name": "that-box2d-library",
+    "description": "A Typescript implementation of the Box2D library",
+    "version": "0.0.1",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ThatDevCompany/that-box2d-library.git"
+    },
+    "contributors": [
+        "Stephen James <steve@thatdevcompany.com> (http://thatdevcompany.com)"
+    ],
+    "main": "src/index.js",
+    "scripts": {
+        "test": "istanbul cover --config .istanbul.yml --include-all-sources ./node_modules/jasmine/bin/jasmine.js src/*[sS]pec.js src/**/*[sS]pec.js",
+        "lint": "tslint -p tsconfig.json"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@types/jasmine": "^2.8.6",
+        "jasmine": "^3.1.0",
+        "jasmine-core": "^3.1.0",
+        "jasmine-spec-reporter": "^4.2.1",
+        "istanbul": "^0.4.5",
+        "tslint": "^5.9.1",
+        "typescript": "^2.8.1",
+        "webpack": "^4.5.0"
+    }
+}

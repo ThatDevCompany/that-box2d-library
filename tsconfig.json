@@ -1,7 +1,10 @@
 {
-    "compileOnSave": true,
+    "compileOnSave": false,
     "compilerOptions": {
+        "outDir": "./",
         "target": "es2015",
+        "declaration": true,
+        "sourceMap": false,
         "typeRoots": [
             "./node_modules/@types"
         ],
@@ -10,7 +13,13 @@
             "node"
         ]
     },
+    "include": [
+        "src/*.ts",
+        "src/**/*.ts"
+    ],
     "exclude": [
+        "*.d.ts",
+        "**.d.ts",
         "./node_modules/*"
     ]
 }

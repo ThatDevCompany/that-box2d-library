@@ -16,11 +16,11 @@
 * 3. This notice may not be removed or altered from any source distribution.
 */
 
-import { B2_pi, B2_linearSlop, B2_maxLinearCorrection } from '../../Common/b2Settings';
-import { B2Abs, B2Clamp, B2Vec2, B2Rot } from '../../Common/b2Math';
-import { B2Joint, B2JointDef, B2JointType } from './b2Joint';
-import { B2SolverData } from '../b2TimeStep';
-import { B2Body } from '../b2Body';
+import {B2_pi, B2_linearSlop, B2_maxLinearCorrection} from '../../Common/b2Settings';
+import {B2Abs, B2Clamp, B2Vec2, B2Rot} from '../../Common/b2Math';
+import {B2Joint, B2JointDef, B2JointType} from './b2Joint';
+import {B2SolverData} from '../b2TimeStep';
+import {B2Body} from '../b2Body';
 
 ///  Distance joint definition. This requires defining an
 ///  anchor point on both bodies and the non-zero length of the
@@ -29,316 +29,323 @@ import { B2Body } from '../b2Body';
 ///  slightly. This helps when saving and loading a game.
 ///  @warning Do not use a zero or short length.
 export class B2DistanceJointDef extends B2JointDef {
-  public localAnchorA: B2Vec2 = new B2Vec2();
-  public localAnchorB: B2Vec2 = new B2Vec2();
-  public length: number = 1;
-  public frequencyHz: number = 0;
-  public dampingRatio: number = 0;
+	public localAnchorA: B2Vec2 = new B2Vec2();
+	public localAnchorB: B2Vec2 = new B2Vec2();
+	public length: number = 1;
+	public frequencyHz: number = 0;
+	public dampingRatio: number = 0;
 
-  constructor() {
-    super(B2JointType.e_distanceJoint);
-  }
+	constructor() {
+		super(B2JointType.e_distanceJoint);
+	}
 
-  public Initialize(b1: B2Body, B2: B2Body, anchor1: B2Vec2, anchor2: B2Vec2): void {
-    this.bodyA = b1;
-    this.bodyB = B2;
-    this.bodyA.GetLocalPoint(anchor1, this.localAnchorA);
-    this.bodyB.GetLocalPoint(anchor2, this.localAnchorB);
-    this.length = B2Vec2.DistanceVV(anchor1, anchor2);
-    this.frequencyHz = 0;
-    this.dampingRatio = 0;
-  }
+	public Initialize(b1: B2Body, B2: B2Body, anchor1: B2Vec2, anchor2: B2Vec2): void {
+		this.bodyA = b1;
+		this.bodyB = B2;
+		this.bodyA.GetLocalPoint(anchor1, this.localAnchorA);
+		this.bodyB.GetLocalPoint(anchor2, this.localAnchorB);
+		this.length = B2Vec2.DistanceVV(anchor1, anchor2);
+		this.frequencyHz = 0;
+		this.dampingRatio = 0;
+	}
 }
 
 export class B2DistanceJoint extends B2Joint {
-  public m_frequencyHz: number = 0;
-  public m_dampingRatio: number = 0;
-  public m_bias: number = 0;
+	public m_frequencyHz: number = 0;
+	public m_dampingRatio: number = 0;
+	public m_bias: number = 0;
 
-  // Solver shared
-  public m_localAnchorA: B2Vec2 = new B2Vec2();
-  public m_localAnchorB: B2Vec2 = new B2Vec2();
-  public m_gamma: number = 0;
-  public m_impulse: number = 0;
-  public m_length: number = 0;
+	// Solver shared
+	public m_localAnchorA: B2Vec2 = new B2Vec2();
+	public m_localAnchorB: B2Vec2 = new B2Vec2();
+	public m_gamma: number = 0;
+	public m_impulse: number = 0;
+	public m_length: number = 0;
 
-  // Solver temp
-  public m_indexA: number = 0;
-  public m_indexB: number = 0;
-  public m_u: B2Vec2 = new B2Vec2();
-  public m_rA: B2Vec2 = new B2Vec2();
-  public m_rB: B2Vec2 = new B2Vec2();
-  public m_localCenterA: B2Vec2 = new B2Vec2();
-  public m_localCenterB: B2Vec2 = new B2Vec2();
-  public m_invMassA: number = 0;
-  public m_invMassB: number = 0;
-  public m_invIA: number = 0;
-  public m_invIB: number = 0;
-  public m_mass: number = 0;
+	// Solver temp
+	public m_indexA: number = 0;
+	public m_indexB: number = 0;
+	public m_u: B2Vec2 = new B2Vec2();
+	public m_rA: B2Vec2 = new B2Vec2();
+	public m_rB: B2Vec2 = new B2Vec2();
+	public m_localCenterA: B2Vec2 = new B2Vec2();
+	public m_localCenterB: B2Vec2 = new B2Vec2();
+	public m_invMassA: number = 0;
+	public m_invMassB: number = 0;
+	public m_invIA: number = 0;
+	public m_invIB: number = 0;
+	public m_mass: number = 0;
 
-  public m_qA: B2Rot = new B2Rot();
-  public m_qB: B2Rot = new B2Rot();
-  public m_lalcA: B2Vec2 = new B2Vec2();
-  public m_lalcB: B2Vec2 = new B2Vec2();
+	public m_qA: B2Rot = new B2Rot();
+	public m_qB: B2Rot = new B2Rot();
+	public m_lalcA: B2Vec2 = new B2Vec2();
+	public m_lalcB: B2Vec2 = new B2Vec2();
 
-  constructor(def: B2DistanceJointDef) {
-    super(def);
+	constructor(def: B2DistanceJointDef) {
+		super(def);
 
-    this.m_frequencyHz = def.frequencyHz;
-    this.m_dampingRatio = def.dampingRatio;
+		this.m_frequencyHz = def.frequencyHz;
+		this.m_dampingRatio = def.dampingRatio;
 
-    this.m_localAnchorA.Copy(def.localAnchorA);
-    this.m_localAnchorB.Copy(def.localAnchorB);
-    this.m_length = def.length;
-  }
+		this.m_localAnchorA.Copy(def.localAnchorA);
+		this.m_localAnchorB.Copy(def.localAnchorB);
+		this.m_length = def.length;
+	}
 
-  public GetAnchorA(out: B2Vec2): B2Vec2 {
-    return this.m_bodyA.GetWorldPoint(this.m_localAnchorA, out);
-  }
+	public GetAnchorA(out: B2Vec2): B2Vec2 {
+		return this.m_bodyA.GetWorldPoint(this.m_localAnchorA, out);
+	}
 
-  public GetAnchorB(out: B2Vec2): B2Vec2 {
-    return this.m_bodyB.GetWorldPoint(this.m_localAnchorB, out);
-  }
+	public GetAnchorB(out: B2Vec2): B2Vec2 {
+		return this.m_bodyB.GetWorldPoint(this.m_localAnchorB, out);
+	}
 
-  public GetReactionForce(inv_dt: number, out: B2Vec2): B2Vec2 {
-    return out.Set(inv_dt * this.m_impulse * this.m_u.x, inv_dt * this.m_impulse * this.m_u.y);
-  }
+	public GetReactionForce(inv_dt: number, out: B2Vec2): B2Vec2 {
+		return out.Set(inv_dt * this.m_impulse * this.m_u.x, inv_dt * this.m_impulse * this.m_u.y);
+	}
 
-  public GetReactionTorque(inv_dt: number): number {
-    return 0;
-  }
+	public GetReactionTorque(inv_dt: number): number {
+		return 0;
+	}
 
-  public GetLocalAnchorA(): B2Vec2 { return this.m_localAnchorA; }
+	public GetLocalAnchorA(): B2Vec2 {
+		return this.m_localAnchorA;
+	}
 
-  public GetLocalAnchorB(): B2Vec2 { return this.m_localAnchorB; }
+	public GetLocalAnchorB(): B2Vec2 {
+		return this.m_localAnchorB;
+	}
 
-  public SetLength(length: number): void {
-    this.m_length = length;
-  }
+	public SetLength(length: number): void {
+		this.m_length = length;
+	}
 
-  public Length() {
-    return this.m_length;
-  }
+	public Length() {
+		return this.m_length;
+	}
 
-  public SetFrequency(hz: number): void {
-    this.m_frequencyHz = hz;
-  }
+	public SetFrequency(hz: number): void {
+		this.m_frequencyHz = hz;
+	}
 
-  public GetFrequency() {
-    return this.m_frequencyHz;
-  }
+	public GetFrequency() {
+		return this.m_frequencyHz;
+	}
 
-  public SetDampingRatio(ratio: number): void {
-    this.m_dampingRatio = ratio;
-  }
+	public SetDampingRatio(ratio: number): void {
+		this.m_dampingRatio = ratio;
+	}
 
-  public GetDampingRatio() {
-    return this.m_dampingRatio;
-  }
+	public GetDampingRatio() {
+		return this.m_dampingRatio;
+	}
 
-  public Dump(log: (format: string, ...args: any[]) => void) {
-    const indexA: number = this.m_bodyA.m_islandIndex;
-    const indexB: number = this.m_bodyB.m_islandIndex;
+	public Dump(log: (format: string, ...args: any[]) => void) {
+		const indexA: number = this.m_bodyA.m_islandIndex;
+		const indexB: number = this.m_bodyB.m_islandIndex;
 
-    log('  const jd: B2DistanceJointDef = new B2DistanceJointDef();\n');
-    log('  jd.bodyA = bodies[%d];\n', indexA);
-    log('  jd.bodyB = bodies[%d];\n', indexB);
-    log('  jd.collideConnected = %s;\n', (this.m_collideConnected) ? ('true') : ('false'));
-    log('  jd.localAnchorA.Set(%.15f, %.15f);\n', this.m_localAnchorA.x, this.m_localAnchorA.y);
-    log('  jd.localAnchorB.Set(%.15f, %.15f);\n', this.m_localAnchorB.x, this.m_localAnchorB.y);
-    log('  jd.length = %.15f;\n', this.m_length);
-    log('  jd.frequencyHz = %.15f;\n', this.m_frequencyHz);
-    log('  jd.dampingRatio = %.15f;\n', this.m_dampingRatio);
-    log('  joints[%d] = this.m_world.CreateJoint(jd);\n', this.m_index);
-  }
+		log('  const jd: B2DistanceJointDef = new B2DistanceJointDef();\n');
+		log('  jd.bodyA = bodies[%d];\n', indexA);
+		log('  jd.bodyB = bodies[%d];\n', indexB);
+		log('  jd.collideConnected = %s;\n', (this.m_collideConnected) ? ('true') : ('false'));
+		log('  jd.localAnchorA.Set(%.15f, %.15f);\n', this.m_localAnchorA.x, this.m_localAnchorA.y);
+		log('  jd.localAnchorB.Set(%.15f, %.15f);\n', this.m_localAnchorB.x, this.m_localAnchorB.y);
+		log('  jd.length = %.15f;\n', this.m_length);
+		log('  jd.frequencyHz = %.15f;\n', this.m_frequencyHz);
+		log('  jd.dampingRatio = %.15f;\n', this.m_dampingRatio);
+		log('  joints[%d] = this.m_world.CreateJoint(jd);\n', this.m_index);
+	}
 
-  private static InitVelocityConstraints_s_P = new B2Vec2();
-  public InitVelocityConstraints(data: B2SolverData): void {
-    this.m_indexA = this.m_bodyA.m_islandIndex;
-    this.m_indexB = this.m_bodyB.m_islandIndex;
-    this.m_localCenterA.Copy(this.m_bodyA.m_sweep.localCenter);
-    this.m_localCenterB.Copy(this.m_bodyB.m_sweep.localCenter);
-    this.m_invMassA = this.m_bodyA.m_invMass;
-    this.m_invMassB = this.m_bodyB.m_invMass;
-    this.m_invIA = this.m_bodyA.m_invI;
-    this.m_invIB = this.m_bodyB.m_invI;
+	private static InitVelocityConstraints_s_P = new B2Vec2();
 
-    const cA: B2Vec2 = data.positions[this.m_indexA].c;
-    const aA: number = data.positions[this.m_indexA].a;
-    const vA: B2Vec2 = data.velocities[this.m_indexA].v;
-    let wA: number = data.velocities[this.m_indexA].w;
+	public InitVelocityConstraints(data: B2SolverData): void {
+		this.m_indexA = this.m_bodyA.m_islandIndex;
+		this.m_indexB = this.m_bodyB.m_islandIndex;
+		this.m_localCenterA.Copy(this.m_bodyA.m_sweep.localCenter);
+		this.m_localCenterB.Copy(this.m_bodyB.m_sweep.localCenter);
+		this.m_invMassA = this.m_bodyA.m_invMass;
+		this.m_invMassB = this.m_bodyB.m_invMass;
+		this.m_invIA = this.m_bodyA.m_invI;
+		this.m_invIB = this.m_bodyB.m_invI;
 
-    const cB: B2Vec2 = data.positions[this.m_indexB].c;
-    const aB: number = data.positions[this.m_indexB].a;
-    const vB: B2Vec2 = data.velocities[this.m_indexB].v;
-    let wB: number = data.velocities[this.m_indexB].w;
+		const cA: B2Vec2 = data.positions[this.m_indexA].c;
+		const aA: number = data.positions[this.m_indexA].a;
+		const vA: B2Vec2 = data.velocities[this.m_indexA].v;
+		let wA: number = data.velocities[this.m_indexA].w;
 
-    // const qA: B2Rot = new B2Rot(aA), qB: B2Rot = new B2Rot(aB);
-    const qA: B2Rot = this.m_qA.SetAngle(aA), qB: B2Rot = this.m_qB.SetAngle(aB);
+		const cB: B2Vec2 = data.positions[this.m_indexB].c;
+		const aB: number = data.positions[this.m_indexB].a;
+		const vB: B2Vec2 = data.velocities[this.m_indexB].v;
+		let wB: number = data.velocities[this.m_indexB].w;
 
-    // m_rA = B2Mul(qA, m_localAnchorA - m_localCenterA);
-    B2Vec2.SubVV(this.m_localAnchorA, this.m_localCenterA, this.m_lalcA);
-    B2Rot.MulRV(qA, this.m_lalcA, this.m_rA);
-    // m_rB = B2Mul(qB, m_localAnchorB - m_localCenterB);
-    B2Vec2.SubVV(this.m_localAnchorB, this.m_localCenterB, this.m_lalcB);
-    B2Rot.MulRV(qB, this.m_lalcB, this.m_rB);
-    // m_u = cB + m_rB - cA - m_rA;
-    this.m_u.x = cB.x + this.m_rB.x - cA.x - this.m_rA.x;
-    this.m_u.y = cB.y + this.m_rB.y - cA.y - this.m_rA.y;
+		// const qA: B2Rot = new B2Rot(aA), qB: B2Rot = new B2Rot(aB);
+		const qA: B2Rot = this.m_qA.SetAngle(aA), qB: B2Rot = this.m_qB.SetAngle(aB);
 
-    // Handle singularity.
-    const length: number = this.m_u.Length();
-    if (length > B2_linearSlop) {
-      this.m_u.SelfMul(1 / length);
-    } else {
-      this.m_u.SetZero();
-    }
+		// m_rA = B2Mul(qA, m_localAnchorA - m_localCenterA);
+		B2Vec2.SubVV(this.m_localAnchorA, this.m_localCenterA, this.m_lalcA);
+		B2Rot.MulRV(qA, this.m_lalcA, this.m_rA);
+		// m_rB = B2Mul(qB, m_localAnchorB - m_localCenterB);
+		B2Vec2.SubVV(this.m_localAnchorB, this.m_localCenterB, this.m_lalcB);
+		B2Rot.MulRV(qB, this.m_lalcB, this.m_rB);
+		// m_u = cB + m_rB - cA - m_rA;
+		this.m_u.x = cB.x + this.m_rB.x - cA.x - this.m_rA.x;
+		this.m_u.y = cB.y + this.m_rB.y - cA.y - this.m_rA.y;
 
-    // float32 crAu = B2Cross(m_rA, m_u);
-    const crAu: number = B2Vec2.CrossVV(this.m_rA, this.m_u);
-    // float32 crBu = B2Cross(m_rB, m_u);
-    const crBu: number = B2Vec2.CrossVV(this.m_rB, this.m_u);
-    // float32 invMass = m_invMassA + m_invIA * crAu * crAu + m_invMassB + m_invIB * crBu * crBu;
-    let invMass: number = this.m_invMassA + this.m_invIA * crAu * crAu + this.m_invMassB + this.m_invIB * crBu * crBu;
+		// Handle singularity.
+		const length: number = this.m_u.Length();
+		if (length > B2_linearSlop) {
+			this.m_u.SelfMul(1 / length);
+		} else {
+			this.m_u.SetZero();
+		}
 
-    // Compute the effective mass matrix.
-    this.m_mass = invMass !== 0 ? 1 / invMass : 0;
+		// float32 crAu = B2Cross(m_rA, m_u);
+		const crAu: number = B2Vec2.CrossVV(this.m_rA, this.m_u);
+		// float32 crBu = B2Cross(m_rB, m_u);
+		const crBu: number = B2Vec2.CrossVV(this.m_rB, this.m_u);
+		// float32 invMass = m_invMassA + m_invIA * crAu * crAu + m_invMassB + m_invIB * crBu * crBu;
+		let invMass: number = this.m_invMassA + this.m_invIA * crAu * crAu + this.m_invMassB + this.m_invIB * crBu * crBu;
 
-    if (this.m_frequencyHz > 0) {
-      const C: number = length - this.m_length;
+		// Compute the effective mass matrix.
+		this.m_mass = invMass !== 0 ? 1 / invMass : 0;
 
-      // Frequency
-      const omega: number = 2 * B2_pi * this.m_frequencyHz;
+		if (this.m_frequencyHz > 0) {
+			const C: number = length - this.m_length;
 
-      // Damping coefficient
-      const d: number = 2 * this.m_mass * this.m_dampingRatio * omega;
+			// Frequency
+			const omega: number = 2 * B2_pi * this.m_frequencyHz;
 
-      // Spring stiffness
-      const k: number = this.m_mass * omega * omega;
+			// Damping coefficient
+			const d: number = 2 * this.m_mass * this.m_dampingRatio * omega;
 
-      // magic formulas
-      const h: number = data.step.dt;
-      this.m_gamma = h * (d + h * k);
-      this.m_gamma = this.m_gamma !== 0 ? 1 / this.m_gamma : 0;
-      this.m_bias = C * h * k * this.m_gamma;
+			// Spring stiffness
+			const k: number = this.m_mass * omega * omega;
 
-      invMass += this.m_gamma;
-      this.m_mass = invMass !== 0 ? 1 / invMass : 0;
-    } else {
-      this.m_gamma = 0;
-      this.m_bias = 0;
-    }
+			// magic formulas
+			const h: number = data.step.dt;
+			this.m_gamma = h * (d + h * k);
+			this.m_gamma = this.m_gamma !== 0 ? 1 / this.m_gamma : 0;
+			this.m_bias = C * h * k * this.m_gamma;
 
-    if (data.step.warmStarting) {
-      // Scale the impulse to support a variable time step.
-      this.m_impulse *= data.step.dtRatio;
+			invMass += this.m_gamma;
+			this.m_mass = invMass !== 0 ? 1 / invMass : 0;
+		} else {
+			this.m_gamma = 0;
+			this.m_bias = 0;
+		}
 
-      // B2Vec2 P = m_impulse * m_u;
-      const P: B2Vec2 = B2Vec2.MulSV(this.m_impulse, this.m_u, B2DistanceJoint.InitVelocityConstraints_s_P);
+		if (data.step.warmStarting) {
+			// Scale the impulse to support a variable time step.
+			this.m_impulse *= data.step.dtRatio;
 
-      // vA -= m_invMassA * P;
-      vA.SelfMulSub(this.m_invMassA, P);
-      // wA -= m_invIA * B2Cross(m_rA, P);
-      wA -= this.m_invIA * B2Vec2.CrossVV(this.m_rA, P);
-      // vB += m_invMassB * P;
-      vB.SelfMulAdd(this.m_invMassB, P);
-      // wB += m_invIB * B2Cross(m_rB, P);
-      wB += this.m_invIB * B2Vec2.CrossVV(this.m_rB, P);
-    } else {
-      this.m_impulse = 0;
-    }
+			// B2Vec2 P = m_impulse * m_u;
+			const P: B2Vec2 = B2Vec2.MulSV(this.m_impulse, this.m_u, B2DistanceJoint.InitVelocityConstraints_s_P);
 
-    // data.velocities[this.m_indexA].v = vA;
-    data.velocities[this.m_indexA].w = wA;
-    // data.velocities[this.m_indexB].v = vB;
-    data.velocities[this.m_indexB].w = wB;
-  }
+			// vA -= m_invMassA * P;
+			vA.SelfMulSub(this.m_invMassA, P);
+			// wA -= m_invIA * B2Cross(m_rA, P);
+			wA -= this.m_invIA * B2Vec2.CrossVV(this.m_rA, P);
+			// vB += m_invMassB * P;
+			vB.SelfMulAdd(this.m_invMassB, P);
+			// wB += m_invIB * B2Cross(m_rB, P);
+			wB += this.m_invIB * B2Vec2.CrossVV(this.m_rB, P);
+		} else {
+			this.m_impulse = 0;
+		}
 
-  private static SolveVelocityConstraints_s_vpA = new B2Vec2();
-  private static SolveVelocityConstraints_s_vpB = new B2Vec2();
-  private static SolveVelocityConstraints_s_P = new B2Vec2();
-  public SolveVelocityConstraints(data: B2SolverData): void {
-    const vA: B2Vec2 = data.velocities[this.m_indexA].v;
-    let wA: number = data.velocities[this.m_indexA].w;
-    const vB: B2Vec2 = data.velocities[this.m_indexB].v;
-    let wB: number = data.velocities[this.m_indexB].w;
+		// data.velocities[this.m_indexA].v = vA;
+		data.velocities[this.m_indexA].w = wA;
+		// data.velocities[this.m_indexB].v = vB;
+		data.velocities[this.m_indexB].w = wB;
+	}
 
-    // B2Vec2 vpA = vA + B2Cross(wA, m_rA);
-    const vpA: B2Vec2 = B2Vec2.AddVCrossSV(vA, wA, this.m_rA, B2DistanceJoint.SolveVelocityConstraints_s_vpA);
-    // B2Vec2 vpB = vB + B2Cross(wB, m_rB);
-    const vpB: B2Vec2 = B2Vec2.AddVCrossSV(vB, wB, this.m_rB, B2DistanceJoint.SolveVelocityConstraints_s_vpB);
-    // float32 Cdot = B2Dot(m_u, vpB - vpA);
-    const Cdot: number = B2Vec2.DotVV(this.m_u, B2Vec2.SubVV(vpB, vpA, B2Vec2.s_t0));
+	private static SolveVelocityConstraints_s_vpA = new B2Vec2();
+	private static SolveVelocityConstraints_s_vpB = new B2Vec2();
+	private static SolveVelocityConstraints_s_P = new B2Vec2();
 
-    const impulse: number = (-this.m_mass * (Cdot + this.m_bias + this.m_gamma * this.m_impulse));
-    this.m_impulse += impulse;
+	public SolveVelocityConstraints(data: B2SolverData): void {
+		const vA: B2Vec2 = data.velocities[this.m_indexA].v;
+		let wA: number = data.velocities[this.m_indexA].w;
+		const vB: B2Vec2 = data.velocities[this.m_indexB].v;
+		let wB: number = data.velocities[this.m_indexB].w;
 
-    // B2Vec2 P = impulse * m_u;
-    const P: B2Vec2 = B2Vec2.MulSV(impulse, this.m_u, B2DistanceJoint.SolveVelocityConstraints_s_P);
+		// B2Vec2 vpA = vA + B2Cross(wA, m_rA);
+		const vpA: B2Vec2 = B2Vec2.AddVCrossSV(vA, wA, this.m_rA, B2DistanceJoint.SolveVelocityConstraints_s_vpA);
+		// B2Vec2 vpB = vB + B2Cross(wB, m_rB);
+		const vpB: B2Vec2 = B2Vec2.AddVCrossSV(vB, wB, this.m_rB, B2DistanceJoint.SolveVelocityConstraints_s_vpB);
+		// float32 Cdot = B2Dot(m_u, vpB - vpA);
+		const Cdot: number = B2Vec2.DotVV(this.m_u, B2Vec2.SubVV(vpB, vpA, B2Vec2.s_t0));
 
-    // vA -= m_invMassA * P;
-    vA.SelfMulSub(this.m_invMassA, P);
-    // wA -= m_invIA * B2Cross(m_rA, P);
-    wA -= this.m_invIA * B2Vec2.CrossVV(this.m_rA, P);
-    // vB += m_invMassB * P;
-    vB.SelfMulAdd(this.m_invMassB, P);
-    // wB += m_invIB * B2Cross(m_rB, P);
-    wB += this.m_invIB * B2Vec2.CrossVV(this.m_rB, P);
+		const impulse: number = (-this.m_mass * (Cdot + this.m_bias + this.m_gamma * this.m_impulse));
+		this.m_impulse += impulse;
 
-    // data.velocities[this.m_indexA].v = vA;
-    data.velocities[this.m_indexA].w = wA;
-    // data.velocities[this.m_indexB].v = vB;
-    data.velocities[this.m_indexB].w = wB;
-  }
+		// B2Vec2 P = impulse * m_u;
+		const P: B2Vec2 = B2Vec2.MulSV(impulse, this.m_u, B2DistanceJoint.SolveVelocityConstraints_s_P);
 
-  private static SolvePositionConstraints_s_P = new B2Vec2();
-  public SolvePositionConstraints(data: B2SolverData): boolean {
-    if (this.m_frequencyHz > 0) {
-      // There is no position correction for soft distance constraints.
-      return true;
-    }
+		// vA -= m_invMassA * P;
+		vA.SelfMulSub(this.m_invMassA, P);
+		// wA -= m_invIA * B2Cross(m_rA, P);
+		wA -= this.m_invIA * B2Vec2.CrossVV(this.m_rA, P);
+		// vB += m_invMassB * P;
+		vB.SelfMulAdd(this.m_invMassB, P);
+		// wB += m_invIB * B2Cross(m_rB, P);
+		wB += this.m_invIB * B2Vec2.CrossVV(this.m_rB, P);
 
-    const cA: B2Vec2 = data.positions[this.m_indexA].c;
-    let aA: number = data.positions[this.m_indexA].a;
-    const cB: B2Vec2 = data.positions[this.m_indexB].c;
-    let aB: number = data.positions[this.m_indexB].a;
+		// data.velocities[this.m_indexA].v = vA;
+		data.velocities[this.m_indexA].w = wA;
+		// data.velocities[this.m_indexB].v = vB;
+		data.velocities[this.m_indexB].w = wB;
+	}
 
-    // const qA: B2Rot = new B2Rot(aA), qB: B2Rot = new B2Rot(aB);
-    /// const qA: B2Rot = this.m_qA.SetAngle(aA), qB: B2Rot = this.m_qB.SetAngle(aB);
+	private static SolvePositionConstraints_s_P = new B2Vec2();
 
-    // B2Vec2 rA = B2Mul(qA, m_localAnchorA - m_localCenterA);
-    const rA: B2Vec2 = B2Rot.MulRV(this.m_qA, this.m_lalcA, this.m_rA); // use m_rA
-    // B2Vec2 rB = B2Mul(qB, m_localAnchorB - m_localCenterB);
-    const rB: B2Vec2 = B2Rot.MulRV(this.m_qB, this.m_lalcB, this.m_rB); // use m_rB
-    // B2Vec2 u = cB + rB - cA - rA;
-    const u: B2Vec2 = this.m_u; // use m_u
-    u.x = cB.x + rB.x - cA.x - rA.x;
-    u.y = cB.y + rB.y - cA.y - rA.y;
+	public SolvePositionConstraints(data: B2SolverData): boolean {
+		if (this.m_frequencyHz > 0) {
+			// There is no position correction for soft distance constraints.
+			return true;
+		}
 
-    // float32 length = u.Normalize();
-    const length: number = this.m_u.Normalize();
-    // float32 C = length - m_length;
-    let C: number = length - this.m_length;
-    C = B2Clamp(C, (-B2_maxLinearCorrection), B2_maxLinearCorrection);
+		const cA: B2Vec2 = data.positions[this.m_indexA].c;
+		let aA: number = data.positions[this.m_indexA].a;
+		const cB: B2Vec2 = data.positions[this.m_indexB].c;
+		let aB: number = data.positions[this.m_indexB].a;
 
-    const impulse: number = (-this.m_mass * C);
-    // B2Vec2 P = impulse * u;
-    const P: B2Vec2 = B2Vec2.MulSV(impulse, u, B2DistanceJoint.SolvePositionConstraints_s_P);
+		// const qA: B2Rot = new B2Rot(aA), qB: B2Rot = new B2Rot(aB);
+		/// const qA: B2Rot = this.m_qA.SetAngle(aA), qB: B2Rot = this.m_qB.SetAngle(aB);
 
-    // cA -= m_invMassA * P;
-    cA.SelfMulSub(this.m_invMassA, P);
-    // aA -= m_invIA * B2Cross(rA, P);
-    aA -= this.m_invIA * B2Vec2.CrossVV(rA, P);
-    // cB += m_invMassB * P;
-    cB.SelfMulAdd(this.m_invMassB, P);
-    // aB += m_invIB * B2Cross(rB, P);
-    aB += this.m_invIB * B2Vec2.CrossVV(rB, P);
+		// B2Vec2 rA = B2Mul(qA, m_localAnchorA - m_localCenterA);
+		const rA: B2Vec2 = B2Rot.MulRV(this.m_qA, this.m_lalcA, this.m_rA); // use m_rA
+		// B2Vec2 rB = B2Mul(qB, m_localAnchorB - m_localCenterB);
+		const rB: B2Vec2 = B2Rot.MulRV(this.m_qB, this.m_lalcB, this.m_rB); // use m_rB
+		// B2Vec2 u = cB + rB - cA - rA;
+		const u: B2Vec2 = this.m_u; // use m_u
+		u.x = cB.x + rB.x - cA.x - rA.x;
+		u.y = cB.y + rB.y - cA.y - rA.y;
 
-    // data.positions[this.m_indexA].c = cA;
-    data.positions[this.m_indexA].a = aA;
-    // data.positions[this.m_indexB].c = cB;
-    data.positions[this.m_indexB].a = aB;
+		// float32 length = u.Normalize();
+		const length: number = this.m_u.Normalize();
+		// float32 C = length - m_length;
+		let C: number = length - this.m_length;
+		C = B2Clamp(C, (-B2_maxLinearCorrection), B2_maxLinearCorrection);
 
-    return B2Abs(C) < B2_linearSlop;
-  }
+		const impulse: number = (-this.m_mass * C);
+		// B2Vec2 P = impulse * u;
+		const P: B2Vec2 = B2Vec2.MulSV(impulse, u, B2DistanceJoint.SolvePositionConstraints_s_P);
+
+		// cA -= m_invMassA * P;
+		cA.SelfMulSub(this.m_invMassA, P);
+		// aA -= m_invIA * B2Cross(rA, P);
+		aA -= this.m_invIA * B2Vec2.CrossVV(rA, P);
+		// cB += m_invMassB * P;
+		cB.SelfMulAdd(this.m_invMassB, P);
+		// aB += m_invIB * B2Cross(rB, P);
+		aB += this.m_invIB * B2Vec2.CrossVV(rB, P);
+
+		// data.positions[this.m_indexA].c = cA;
+		data.positions[this.m_indexA].a = aA;
+		// data.positions[this.m_indexB].c = cB;
+		data.positions[this.m_indexB].a = aB;
+
+		return B2Abs(C) < B2_linearSlop;
+	}
 }

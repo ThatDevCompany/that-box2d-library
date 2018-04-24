@@ -10,10 +10,7 @@
         "curly": true,
         "eofline": true,
         "forin": false,
-        "import-blacklist": [
-            true,
-            "rxjs"
-        ],
+        "import-blacklist": false,
         "import-spacing": true,
         "indent": [
             false,

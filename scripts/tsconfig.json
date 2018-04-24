@@ -1,11 +1,14 @@
 {
+	"compileOnSave": true,
 	"compilerOptions": {
 		"target": "es5",
-		"outDir": "dist",
 		"sourceMap": false,
-		"declaration": true,
+		"declaration": false,
 		"moduleResolution": "node",
+		"experimentalDecorators": true,
 		"types": [
+			"jasmine",
+			"jasminewd2",
 			"node"
 		],
 		"typeRoots": [
@@ -16,12 +19,9 @@
 			"dom"
 		]
 	},
-	"include": [
-		"src"
-	],
 	"exclude": [
 		"node_modules",
 		"dist",
-		"**/*.spec.ts"
+		"**/*.module.ts"
 	]
 }

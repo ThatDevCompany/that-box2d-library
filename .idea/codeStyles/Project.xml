@@ -3,18 +3,25 @@
     <MarkdownNavigatorCodeStyleSettings>
       <option name="RIGHT_MARGIN" value="72" />
     </MarkdownNavigatorCodeStyleSettings>
-    <TypeScriptCodeStyleSettings>
-      <option name="USE_DOUBLE_QUOTES" value="false" />
-      <option name="FORCE_QUOTE_STYlE" value="true" />
-    </TypeScriptCodeStyleSettings>
+    <codeStyleSettings language="HTML">
+      <indentOptions>
+        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+        <option name="USE_TAB_CHARACTER" value="true" />
+      </indentOptions>
+    </codeStyleSettings>
     <codeStyleSettings language="JSON">
       <indentOptions>
         <option name="INDENT_SIZE" value="4" />
         <option name="CONTINUATION_INDENT_SIZE" value="4" />
+        <option name="USE_TAB_CHARACTER" value="true" />
+      </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="JavaScript">
+      <indentOptions>
+        <option name="USE_TAB_CHARACTER" value="true" />
       </indentOptions>
     </codeStyleSettings>
     <codeStyleSettings language="TypeScript">
-      <option name="RIGHT_MARGIN" value="250" />
       <indentOptions>
         <option name="USE_TAB_CHARACTER" value="true" />
       </indentOptions>

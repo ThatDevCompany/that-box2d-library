@@ -17,9 +17,9 @@
 */
 
 export function B2Assert(condition: boolean, ...args: any[]): void {
-  if (!condition) {
-    console.error('Here');
-  }
+	if (!condition) {
+		console.error('Here');
+	}
 }
 
 export const B2_maxFloat: number = 1E+37; // FLT_MAX instead of Number.MAX_VALUE;
@@ -151,7 +151,7 @@ export const B2_angularSleepTolerance: number = 2 / 180 * B2_pi;
 
 ///  Implement this function to use your own memory allocator.
 export function B2Alloc(size: number): any {
-  return null;
+	return null;
 }
 
 ///  If you implement B2Alloc, you should also implement this function.
@@ -160,27 +160,27 @@ export function B2Free(mem: any): void {
 
 ///  Logging function.
 export function B2Log(message: string, ...args: any[]): void {
-  // const args = Array.prototype.slice.call(arguments);
-  // const str = goog.string.format.apply(null, args.slice(0));
-  // console.log(message);
+	// const args = Array.prototype.slice.call(arguments);
+	// const str = goog.string.format.apply(null, args.slice(0));
+	// console.log(message);
 }
 
 ///  Version numbering scheme.
 ///  See http://en.wikipedia.org/wiki/Software_versioning
 export class B2Version {
-  public major: number = 0; /// < significant changes
-  public minor: number = 0; /// < incremental changes
-  public revision: number = 0; /// < bug fixes
+	public major: number = 0; /// < significant changes
+	public minor: number = 0; /// < incremental changes
+	public revision: number = 0; /// < bug fixes
 
-  constructor(major: number = 0, minor: number = 0, revision: number = 0) {
-    this.major = major;
-    this.minor = minor;
-    this.revision = revision;
-  }
+	constructor(major: number = 0, minor: number = 0, revision: number = 0) {
+		this.major = major;
+		this.minor = minor;
+		this.revision = revision;
+	}
 
-  public toString(): string {
-    return this.major + '.' + this.minor + '.' + this.revision;
-  }
+	public toString(): string {
+		return this.major + '.' + this.minor + '.' + this.revision;
+	}
 }
 
 ///  Current version.
@@ -189,33 +189,33 @@ export const B2_version: B2Version = new B2Version(2, 3, 2);
 export const B2_changelist: number = 313;
 
 export function B2ParseInt(v: string): number {
-  return parseInt(v, 10);
+	return parseInt(v, 10);
 }
 
 export function B2ParseUInt(v: string): number {
-  return Math.abs(parseInt(v, 10));
+	return Math.abs(parseInt(v, 10));
 }
 
 export function B2MakeArray(length: number, init: { (i: number): any; }): any[] {
-  let a: any[] = [];
-  for (let i: number = 0; i < length; ++i) {
-    a.push(init(i));
-  }
-  return a;
+	let a: any[] = [];
+	for (let i: number = 0; i < length; ++i) {
+		a.push(init(i));
+	}
+	return a;
 }
 
 export function B2MakeNullArray(length: number): any[] {
-  const a: any[] = [];
-  for (let i: number = 0; i < length; ++i) {
-    a.push(null);
-  }
-  return a;
+	const a: any[] = [];
+	for (let i: number = 0; i < length; ++i) {
+		a.push(null);
+	}
+	return a;
 }
 
 export function B2MakeNumberArray(length: number, init: number = 0): number[] {
-  const a: any[] = [];
-  for (let i: number = 0; i < length; ++i) {
-    a.push(init);
-  }
-  return a;
+	const a: any[] = [];
+	for (let i: number = 0; i < length; ++i) {
+		a.push(init);
+	}
+	return a;
 }

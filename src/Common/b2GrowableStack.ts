@@ -21,33 +21,33 @@
 ///  to increase the size of the stack.
 
 export class B2GrowableStack {
-  public m_stack: any[] = [];
-  public m_count: number = 0;
+	public m_stack: any[] = [];
+	public m_count: number = 0;
 
-  constructor(N: number) {
-    this.m_stack = [/*N*/];
-    this.m_count = 0;
-  }
+	constructor(N: number) {
+		this.m_stack = [/*N*/];
+		this.m_count = 0;
+	}
 
-  public Reset(): B2GrowableStack {
-    this.m_count = 0;
-    return this;
-  }
+	public Reset(): B2GrowableStack {
+		this.m_count = 0;
+		return this;
+	}
 
-  public Push(element: any): void {
-    this.m_stack[this.m_count] = element;
-    this.m_count++;
-  }
+	public Push(element: any): void {
+		this.m_stack[this.m_count] = element;
+		this.m_count++;
+	}
 
-  public Pop(): any {
-    /// b2Assert(this.m_count > 0);
-    this.m_count--;
-    const element: any = this.m_stack[this.m_count];
-    this.m_stack[this.m_count] = null;
-    return element;
-  }
+	public Pop(): any {
+		/// b2Assert(this.m_count > 0);
+		this.m_count--;
+		const element: any = this.m_stack[this.m_count];
+		this.m_stack[this.m_count] = null;
+		return element;
+	}
 
-  public GetCount(): number {
-    return this.m_count;
-  }
+	public GetCount(): number {
+		return this.m_count;
+	}
 }

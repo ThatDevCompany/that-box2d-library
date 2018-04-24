@@ -16,38 +16,38 @@
 * 3. This notice may not be removed or altered from any source distribution.
 */
 
-import { B2Transform } from '../../Common/b2Math';
-import { B2CollideCircles } from '../../Collision/b2CollideCircle';
-import { B2Manifold } from '../../Collision/b2Collision';
-import { B2Shape } from '../../Collision/Shapes/b2Shape';
-import { B2CircleShape } from '../../Collision/Shapes/b2CircleShape';
-import { B2Contact } from './b2Contact';
-import { B2Fixture } from '../b2Fixture';
+import {B2Transform} from '../../Common/b2Math';
+import {B2CollideCircles} from '../../Collision/b2CollideCircle';
+import {B2Manifold} from '../../Collision/b2Collision';
+import {B2Shape} from '../../Collision/Shapes/b2Shape';
+import {B2CircleShape} from '../../Collision/Shapes/b2CircleShape';
+import {B2Contact} from './b2Contact';
+import {B2Fixture} from '../b2Fixture';
 
 export class B2CircleContact extends B2Contact {
-  constructor() {
-    super();
-  }
+	constructor() {
+		super();
+	}
 
-  public static Create(allocator: any): B2Contact {
-    return new B2CircleContact();
-  }
+	public static Create(allocator: any): B2Contact {
+		return new B2CircleContact();
+	}
 
-  public static Destroy(contact: B2Contact, allocator: any): void {
-  }
+	public static Destroy(contact: B2Contact, allocator: any): void {
+	}
 
-  public Reset(fixtureA: B2Fixture, indexA: number, fixtureB: B2Fixture, indexB: number): void {
-    super.Reset(fixtureA, indexA, fixtureB, indexB);
-  }
+	public Reset(fixtureA: B2Fixture, indexA: number, fixtureB: B2Fixture, indexB: number): void {
+		super.Reset(fixtureA, indexA, fixtureB, indexB);
+	}
 
-  public Evaluate(manifold: B2Manifold, xfA: B2Transform, xfB: B2Transform): void {
-    const shapeA: B2Shape = this.m_fixtureA.GetShape();
-    const shapeB: B2Shape = this.m_fixtureB.GetShape();
-    /// b2Assert(shapeA instanceof B2CircleShape);
-    /// b2Assert(shapeB instanceof B2CircleShape);
-    B2CollideCircles(
-      manifold,
-      <B2CircleShape> shapeA, xfA,
-      <B2CircleShape> shapeB, xfB);
-  }
+	public Evaluate(manifold: B2Manifold, xfA: B2Transform, xfB: B2Transform): void {
+		const shapeA: B2Shape = this.m_fixtureA.GetShape();
+		const shapeB: B2Shape = this.m_fixtureB.GetShape();
+		/// b2Assert(shapeA instanceof B2CircleShape);
+		/// b2Assert(shapeB instanceof B2CircleShape);
+		B2CollideCircles(
+			manifold,
+			<B2CircleShape> shapeA, xfA,
+			<B2CircleShape> shapeB, xfB);
+	}
 }

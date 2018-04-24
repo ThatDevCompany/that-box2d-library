@@ -5,8 +5,6 @@ instrumentation:
         - .js
     default-excludes: true
     excludes:
-        - coverage/**
-        - nodule_modules/**
     embed-source: false
     variable: __coverage__
     compact: true

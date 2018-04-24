@@ -1,11 +1,13 @@
 {
+	"compileOnSave": true,
 	"compilerOptions": {
+		"rootDir": "./",
 		"target": "es5",
-		"outDir": "dist",
 		"sourceMap": false,
-		"declaration": true,
 		"moduleResolution": "node",
 		"types": [
+			"jasmine",
+			"jasminewd2",
 			"node"
 		],
 		"typeRoots": [
@@ -16,12 +18,9 @@
 			"dom"
 		]
 	},
-	"include": [
-		"src"
-	],
 	"exclude": [
 		"node_modules",
 		"dist",
-		"**/*.spec.ts"
+		"**/*.module.ts"
 	]
 }

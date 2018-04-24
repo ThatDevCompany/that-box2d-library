@@ -16,4 +16,5 @@
 * 3. This notice may not be removed or altered from any source distribution.
 */
 
-export class B2BlockAllocator {}
+export class B2BlockAllocator {
+}

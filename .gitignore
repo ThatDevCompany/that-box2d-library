@@ -1,4 +1,10 @@
+.DS_Store
+
 coverage
+dist
 node_modules
-src/*.js
+
+scripts/*.js
+scripts/**/*.js
 src/**/*.js
+src/*.js

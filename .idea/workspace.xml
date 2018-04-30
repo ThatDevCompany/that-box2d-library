@@ -2,209 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7450a8f-170a-48fd-83e1-7dc0c4d9a0eb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/build.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/lint.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/publish.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/that-box2d-library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/that-box2d-library.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webResources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.istanbul.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.istanbul.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/Shapes/b2ChainShape.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/Shapes/b2ChainShape.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/Shapes/b2CircleShape.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/Shapes/b2CircleShape.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/Shapes/b2EdgeShape.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/Shapes/b2EdgeShape.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/Shapes/b2PolygonShape.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/Shapes/b2PolygonShape.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/Shapes/b2Shape.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/Shapes/b2Shape.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/Shapes/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/Shapes/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/b2BroadPhase.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/b2BroadPhase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/b2CollideCircle.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/b2CollideCircle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/b2CollideEdge.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/b2CollideEdge.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/b2CollidePolygon.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/b2CollidePolygon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/b2Collision.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/b2Collision.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/b2Distance.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/b2Distance.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/b2DynamicTree.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/b2DynamicTree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/b2TimeOfImpact.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/b2TimeOfImpact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/b2BlockAllocator.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/b2BlockAllocator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/b2Draw.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/b2Draw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/b2GrowableStack.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/b2GrowableStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/b2GrowableStack.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/b2Math.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/b2Math.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/b2Settings.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/b2Settings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/b2StackAllocator.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/b2StackAllocator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/b2Timer.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/b2Timer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2ChainAndCircleContact.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2ChainAndCircleContact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2ChainAndPolygonContact.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2ChainAndPolygonContact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2CircleContact.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2CircleContact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2Contact.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2Contact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2ContactFactory.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2ContactFactory.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2ContactSolver.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2ContactSolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2EdgeAndCircleContact.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2EdgeAndCircleContact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2EdgeAndPolygonContact.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2EdgeAndPolygonContact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2PolygonAndCircleContact.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2PolygonAndCircleContact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2PolygonContact.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/b2PolygonContact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Contacts/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2AreaJoint.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2AreaJoint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2DistanceJoint.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2DistanceJoint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2FrictionJoint.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2FrictionJoint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2GearJoint.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2GearJoint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2Joint.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2Joint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2JointFactory.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2JointFactory.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2MotorJoint.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2MotorJoint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2MouseJoint.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2MouseJoint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2PrismaticJoint.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2PrismaticJoint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2PulleyJoint.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2PulleyJoint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2RevoluteJoint.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2RevoluteJoint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2RopeJoint.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2RopeJoint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2WeldJoint.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2WeldJoint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2WheelJoint.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/b2WheelJoint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/Joints/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/b2Body.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/b2Body.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/b2ContactManager.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/b2ContactManager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/b2Fixture.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/b2Fixture.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/b2Island.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/b2Island.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/b2TimeStep.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/b2TimeStep.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/b2World.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/b2World.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/b2WorldCallbacks.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/b2WorldCallbacks.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dynamics/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Particle/b2Particle.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Particle/b2Particle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Particle/b2ParticleGroup.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Particle/b2ParticleGroup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Particle/b2ParticleSystem.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Particle/b2ParticleSystem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Particle/b2StackQueue.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Particle/b2StackQueue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Particle/b2VoronoiDiagram.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Particle/b2VoronoiDiagram.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Particle/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Particle/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rope/b2Rope.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rope/b2Rope.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rope/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rope/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Collision/Shapes/b2ChainShape.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collision/Shapes/b2ChainShape.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Collision/Shapes/b2CircleShape.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collision/Shapes/b2CircleShape.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Collision/Shapes/b2EdgeShape.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collision/Shapes/b2EdgeShape.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Collision/Shapes/b2PolygonShape.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collision/Shapes/b2PolygonShape.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Collision/Shapes/b2Shape.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collision/Shapes/b2Shape.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Collision/b2BroadPhase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collision/b2BroadPhase.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Collision/b2CollideCircle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collision/b2CollideCircle.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Collision/b2CollideEdge.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collision/b2CollideEdge.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Collision/b2CollidePolygon.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collision/b2CollidePolygon.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Collision/b2Collision.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collision/b2Collision.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Collision/b2Distance.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collision/b2Distance.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Collision/b2DynamicTree.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collision/b2DynamicTree.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Collision/b2TimeOfImpact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collision/b2TimeOfImpact.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Common/b2BlockAllocator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/b2BlockAllocator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Common/b2Draw.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/b2Draw.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Common/b2Math.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/b2Math.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Common/b2Settings.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/b2Settings.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Common/b2StackAllocator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/b2StackAllocator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Common/b2Timer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/b2Timer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Contacts/b2ChainAndCircleContact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Contacts/b2ChainAndCircleContact.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Contacts/b2ChainAndPolygonContact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Contacts/b2ChainAndPolygonContact.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Contacts/b2CircleContact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Contacts/b2CircleContact.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Contacts/b2Contact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Contacts/b2Contact.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Contacts/b2ContactFactory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Contacts/b2ContactFactory.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Contacts/b2ContactSolver.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Contacts/b2ContactSolver.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Contacts/b2EdgeAndCircleContact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Contacts/b2EdgeAndCircleContact.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Contacts/b2EdgeAndPolygonContact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Contacts/b2EdgeAndPolygonContact.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Contacts/b2PolygonAndCircleContact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Contacts/b2PolygonAndCircleContact.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Contacts/b2PolygonContact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Contacts/b2PolygonContact.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Joints/b2AreaJoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Joints/b2AreaJoint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Joints/b2DistanceJoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Joints/b2DistanceJoint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Joints/b2FrictionJoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Joints/b2FrictionJoint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Joints/b2GearJoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Joints/b2GearJoint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Joints/b2Joint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Joints/b2Joint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Joints/b2JointFactory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Joints/b2JointFactory.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Joints/b2MotorJoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Joints/b2MotorJoint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Joints/b2MouseJoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Joints/b2MouseJoint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Joints/b2PrismaticJoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Joints/b2PrismaticJoint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Joints/b2PulleyJoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Joints/b2PulleyJoint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Joints/b2RevoluteJoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Joints/b2RevoluteJoint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Joints/b2RopeJoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Joints/b2RopeJoint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Joints/b2WeldJoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Joints/b2WeldJoint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/Joints/b2WheelJoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Joints/b2WheelJoint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/b2Body.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/b2Body.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/b2ContactManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/b2ContactManager.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/b2Fixture.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/b2Fixture.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/b2Island.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/b2Island.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/b2TimeStep.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/b2TimeStep.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/b2World.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/b2World.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/b2WorldCallbacks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/b2WorldCallbacks.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Particle/b2Particle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Particle/b2Particle.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Particle/b2ParticleGroup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Particle/b2ParticleGroup.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Particle/b2ParticleSystem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Particle/b2ParticleSystem.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Particle/b2StackQueue.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Particle/b2StackQueue.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Particle/b2VoronoiDiagram.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Particle/b2VoronoiDiagram.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rope/b2Rope.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rope/b2Rope.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/tslint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dynamics/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/index.ts" afterDir="false" />
     </list>
     <ignored path="wwwxi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -223,8 +23,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Dynamics/index.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
@@ -246,7 +55,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Poly</find>
       <find>utils</find>
       <find>entryPoints</find>
       <find>realNodeModules</find>
@@ -276,6 +84,7 @@
       <find>angular</find>
       <find>use-in</find>
       <find>Transmitter</find>
+      <find>b2bodyde</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -348,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../polymer-style-animator/style-animator.html" />
         <option value="$PROJECT_DIR$/src/example.ts" />
         <option value="$PROJECT_DIR$/src/ctrnn.ts" />
         <option value="$PROJECT_DIR$/src/CTRNN.ts" />
@@ -386,19 +194,20 @@
         <option value="$PROJECT_DIR$/src/signal/index.ts" />
         <option value="$PROJECT_DIR$/src/ctrnn/actuator/Actuator.ts" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
-        <option value="$PROJECT_DIR$/src/Dynamics/index.ts" />
         <option value="$PROJECT_DIR$/src/index.ts" />
         <option value="$PROJECT_DIR$/src/Collision/index.ts" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/scripts/build.ts" />
         <option value="$PROJECT_DIR$/scripts/publish.ts" />
         <option value="$PROJECT_DIR$/scripts/test.ts" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/Dynamics/b2World.ts" />
         <option value="$PROJECT_DIR$/scripts/lint.ts" />
         <option value="$PROJECT_DIR$/src/Particle/b2ParticleSystem.ts" />
         <option value="$PROJECT_DIR$/src/index.spec.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/Dynamics/b2AppliedForce.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/Dynamics/index.ts" />
       </list>
     </option>
   </component>
@@ -446,7 +255,18 @@
             <path>
               <item name="that-box2d-library" type="b2602c69:ProjectViewProjectNode" />
               <item name="that-box2d-library" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="that-box2d-library" type="b2602c69:ProjectViewProjectNode" />
+              <item name="that-box2d-library" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="that-box2d-library" type="b2602c69:ProjectViewProjectNode" />
+              <item name="that-box2d-library" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Dynamics" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -485,19 +305,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/signals" />
-      <recent name="$PROJECT_DIR$/src/ctrnn/sensor" />
-      <recent name="$PROJECT_DIR$/src/ctrnn/actuator" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/signals" />
       <recent name="$PROJECT_DIR$/src/ctrnn/actuator" />
       <recent name="$PROJECT_DIR$/src/ctrnn" />
       <recent name="$PROJECT_DIR$/src/ctrnn/receiver" />
       <recent name="$PROJECT_DIR$/src/ctrnn/sensor" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/signals" />
+      <recent name="$PROJECT_DIR$/src/ctrnn/sensor" />
+      <recent name="$PROJECT_DIR$/src/ctrnn/actuator" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -664,8 +484,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.publish" />
-        <item itemvalue="npm.test" />
         <item itemvalue="npm.lint" />
+        <item itemvalue="npm.test" />
         <item itemvalue="npm.cover" />
         <item itemvalue="npm.start" />
       </list>
@@ -1069,7 +889,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="364996000" />
+    <option name="totallyTimeSpent" value="367327000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1088,45 +908,58 @@
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.49330515" side_tool="true" weight="0.34545454" />
       <window_info anchor="bottom" id="Run" order="5" sideWeight="0.5045807" visible="true" weight="0.34545454" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.48978153" side_tool="true" weight="0.34666666" />
-      <window_info id="npm" order="4" sideWeight="0.20222634" weight="0.27272728" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49541932" side_tool="true" visible="true" weight="0.34545454" />
+      <window_info active="true" id="npm" order="4" sideWeight="0.20222634" visible="true" weight="0.27272728" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49541932" side_tool="true" weight="0.34545454" />
       <window_info anchor="bottom" id="TypeScript" order="7" sideWeight="0.48696265" weight="0.32848486" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.79777366" visible="true" weight="0.27272728" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.79777366" weight="0.27272728" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.46863988" weight="0.44" />
       <window_info id="Structure" order="3" show_stripe_button="false" side_tool="true" weight="0.24929178" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39972898" />
       <window_info auto_hide="true" id="Favorites" internal_type="SLIDING" order="2" show_stripe_button="false" sideWeight="0.19911504" side_tool="true" type="SLIDING" weight="0.2967422" />
+      <window_info anchor="bottom" id="TypeScript" order="7" sideWeight="0.48696265" weight="0.32848486" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
+      <window_info id="npm" order="4" sideWeight="0.20222634" weight="0.27272728" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.5045807" visible="true" weight="0.34545454" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.79777366" visible="true" weight="0.27272728" />
+      <window_info id="Structure" order="3" show_stripe_button="false" side_tool="true" weight="0.24929178" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="TODO" order="5" sideWeight="0.49964765" weight="0.32840028" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.48978153" side_tool="true" weight="0.34666666" />
       <window_info id="Grunt " order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.46863988" weight="0.44" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.39972898" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.3306233" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.49330515" side_tool="true" weight="0.34545454" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49541932" side_tool="true" visible="true" weight="0.34545454" />
+      <window_info auto_hide="true" id="Favorites" internal_type="SLIDING" order="2" show_stripe_button="false" sideWeight="0.19911504" side_tool="true" type="SLIDING" weight="0.2967422" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.48978153" side_tool="true" weight="0.34666666" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="4" sideWeight="0.20222634" weight="0.27272728" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.50669485" weight="0.34571427" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.79777366" visible="true" weight="0.27272728" />
       <window_info id="Structure" order="3" show_stripe_button="false" side_tool="true" weight="0.24929178" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49964765" weight="0.32848486" />
       <window_info anchor="bottom" id="TypeScript" order="8" sideWeight="0.48696265" weight="0.32848486" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.50669485" weight="0.34571427" />
-      <window_info id="Grunt " order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.46863988" weight="0.44" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39972898" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3306233" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49330515" side_tool="true" weight="0.34545454" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.4918957" side_tool="true" weight="0.34666666" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.46863988" weight="0.44" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.3306233" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.48978153" side_tool="true" weight="0.34666666" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Grunt " order="1" side_tool="true" />
       <window_info auto_hide="true" id="Favorites" internal_type="SLIDING" order="2" show_stripe_button="false" sideWeight="0.19911504" side_tool="true" type="SLIDING" weight="0.2967422" />
     </layout-to-restore>
   </component>
@@ -1200,101 +1033,7 @@
         <option value="$PROJECT_DIR$/src/Dynamics/Joints/b2RopeJoint.js" />
         <option value="$PROJECT_DIR$/src/Dynamics/Joints/b2Joint.js" />
         <option value="$PROJECT_DIR$/src/Dynamics/Joints/b2WheelJoint.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/OLD/server.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/OLD/server.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/application.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/index.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/index.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/application.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/servers/index.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/servers/static.server.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/servers/static.server.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/servers/index.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/attribute.controller.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/userinvitation.controller.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/dataevent.controller.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/organisation.controller.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/integration.controller.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/dataset.controller.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/robot.controller.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/dataset.controller.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/index.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/datafile.controller.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/apikey.controller.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/releasenote.controller.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/integration.controller.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/dataevent.controller.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/user.controller.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/attribute.controller.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/delivery.controller.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/delivery.controller.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/organisation.controller.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/index.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/releasenote.controller.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/robot.controller.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/apikey.controller.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/userinvitation.controller.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/user.controller.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/controllers/datafile.controller.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/datasources/memory.datasource.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/datasources/index.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/datasources/memory.datasource.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/datasources/index.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/dataset.repository.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/apikey.repository.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/attribute.repository.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/dataset.repository.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/user.repository.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/index.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/robot.repository.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/index.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/datafile.repository.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/attribute.repository.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/userinvitation.repository.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/delivery.repository.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/releasenote.repository.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/releasenote.repository.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/dataevent.repository.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/organisation.repository.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/user.repository.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/apikey.repository.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/integration.repository.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/delivery.repository.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/robot.repository.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/integration.repository.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/datafile.repository.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/userinvitation.repository.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/organisation.repository.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/repositories/dataevent.repository.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/userinvitation.model.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/dataset.model.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/dataset.model.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/organisation.model.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/dataevent.model.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/index.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/user.model.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/userinvitation.model.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/releasenote.model.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/datafile.model.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/releasenote.model.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/attribute.model.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/apikey.model.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/apikey.model.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/integration.model.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/delivery.model.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/index.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/organisation.model.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/user.model.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/delivery.model.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/attribute.model.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/integration.model.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/datafile.model.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/robot.model.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/dataevent.model.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/models/robot.model.js.map" />
         <option value="$PROJECT_DIR$/src/index.spec.js" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/OLD/models/attribute.js.map" />
-        <option value="$PROJECT_DIR$/../farmyard/src/server/OLD/models/attribute.js" />
       </list>
     </option>
   </component>
@@ -1386,7 +1125,6 @@
         <line-breakpoint enabled="true" suspend="NONE" type="javascript">
           <url>file://$PROJECT_DIR$/scripts/build.ts</url>
           <log-expression expression="mport {BuildUtils} from 'that-build-library';&#10;" language="TypeScript" />
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="76" />
         </line-breakpoint>
       </breakpoints>
@@ -1403,9 +1141,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/client/polymer/tdc-sparkle.html" />
-    <entry file="file://$PROJECT_DIR$/bower.json" />
-    <entry file="file://$PROJECT_DIR$/src/client/polymer/tdc-styles.html" />
     <entry file="file://$PROJECT_DIR$/bower_components/scrolltop-emitter/scrolltop-emitter.html" />
     <entry file="file://$PROJECT_DIR$/src/client/polymer/tdc-www.html" />
     <entry file="file://$PROJECT_DIR$/src/client/polymer/tdc-bounceblock.html" />
@@ -1444,20 +1179,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Collision/Shapes/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamics/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
@@ -1518,23 +1239,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.npmrc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamics/b2World.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="260" column="35" selection-start-line="260" selection-start-column="35" selection-end-line="260" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/lint.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1560,6 +1264,68 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Collision/Shapes/b2Shape.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dynamics/b2World.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="113" column="49" lean-forward="true" selection-start-line="113" selection-start-column="49" selection-end-line="113" selection-end-column="49" />
+          <folding>
+            <element signature="e#898#996#0" expanded="true" />
+            <element signature="e#2666#2715#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dynamics/b2Body.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="45" column="46" lean-forward="true" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dynamics/b2AppliedForce.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dynamics/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />

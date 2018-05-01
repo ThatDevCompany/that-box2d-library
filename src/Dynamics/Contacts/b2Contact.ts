@@ -227,7 +227,8 @@ export class B2Contact {
 			/// }
 
 			// Sensors don't generate manifolds.
-			this.m_manifold.pointCount = 0;
+			this.Evaluate(this.m_manifold, xfA, xfB);
+
 		} else {
 			/// if (aabbOverlap)
 			/// {

@@ -4,7 +4,8 @@
     <list default="true" id="c7450a8f-170a-48fd-83e1-7dc0c4d9a0eb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dynamics/Contacts/b2Contact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Contacts/b2Contact.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dynamics/b2World.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/b2World.ts" afterDir="false" />
     </list>
     <ignored path="wwwxi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,21 +23,60 @@
     <favorites_list name="wwwxi" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+    <leaf>
+      <file leaf-file-name="b2World.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Dynamics/b2World.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+            <state relative-caret-position="88">
+              <caret line="1246" lean-forward="true" selection-start-line="1246" selection-end-line="1246" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="b2Contact.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Dynamics/Contacts/b2Contact.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="229" selection-start-line="229" selection-end-line="229" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="b2CollideEdge.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Collision/b2CollideEdge.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
+              <folding>
+                <element signature="e#0#135#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="b2ContactFactory.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Dynamics/Contacts/b2ContactFactory.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="115" column="21" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/build.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Dynamics/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="90">
+              <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -55,9 +95,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>utils</find>
-      <find>entryPoints</find>
-      <find>realNodeModules</find>
       <find>vendor</find>
       <find>deployUrl</find>
       <find>lib/</find>
@@ -85,6 +122,9 @@
       <find>use-in</find>
       <find>Transmitter</find>
       <find>b2bodyde</find>
+      <find>skip</find>
+      <find>sensor</find>
+      <find>isSensor</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -142,13 +182,13 @@
       <dir>$PROJECT_DIR$/build/common</dir>
       <dir>$PROJECT_DIR$/build/server</dir>
       <dir>$PROJECT_DIR$/build</dir>
-      <dir>$PROJECT_DIR$/src</dir>
       <dir>$PROJECT_DIR$/src/common</dir>
       <dir>$PROJECT_DIR$/src/server</dir>
       <dir>$PROJECT_DIR$/src/client</dir>
       <dir>$PROJECT_DIR$/client/polymer/tdc</dir>
       <dir>$PROJECT_DIR$/client/polymer</dir>
       <dir>$PROJECT_DIR$/src/client/polymer</dir>
+      <dir>$PROJECT_DIR$/src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -157,7 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/example.ts" />
         <option value="$PROJECT_DIR$/src/ctrnn.ts" />
         <option value="$PROJECT_DIR$/src/CTRNN.ts" />
         <option value="$PROJECT_DIR$/src/CTRNNConnectee.ts" />
@@ -200,7 +239,6 @@
         <option value="$PROJECT_DIR$/scripts/build.ts" />
         <option value="$PROJECT_DIR$/scripts/publish.ts" />
         <option value="$PROJECT_DIR$/scripts/test.ts" />
-        <option value="$PROJECT_DIR$/src/Dynamics/b2World.ts" />
         <option value="$PROJECT_DIR$/scripts/lint.ts" />
         <option value="$PROJECT_DIR$/src/Particle/b2ParticleSystem.ts" />
         <option value="$PROJECT_DIR$/src/index.spec.ts" />
@@ -208,6 +246,8 @@
         <option value="$PROJECT_DIR$/src/Dynamics/b2AppliedForce.ts" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/Dynamics/index.ts" />
+        <option value="$PROJECT_DIR$/src/Dynamics/b2World.ts" />
+        <option value="$PROJECT_DIR$/src/Dynamics/Contacts/b2Contact.ts" />
       </list>
     </option>
   </component>
@@ -245,17 +285,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="that-box2d-library" type="b2602c69:ProjectViewProjectNode" />
               <item name="that-box2d-library" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="that-box2d-library" type="b2602c69:ProjectViewProjectNode" />
-              <item name="that-box2d-library" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="that-box2d-library" type="b2602c69:ProjectViewProjectNode" />
@@ -272,7 +308,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -889,7 +924,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="367327000" />
+    <option name="totallyTimeSpent" value="368279000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -901,15 +936,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" order="5" sideWeight="0.49964765" weight="0.32840028" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.49330515" side_tool="true" weight="0.34545454" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.5045807" visible="true" weight="0.34545454" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.503876" visible="true" weight="0.34545454" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.48978153" side_tool="true" weight="0.34666666" />
-      <window_info active="true" id="npm" order="4" sideWeight="0.20222634" visible="true" weight="0.27272728" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49541932" side_tool="true" weight="0.34545454" />
+      <window_info id="npm" order="4" sideWeight="0.20222634" visible="true" weight="0.27272728" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49612403" side_tool="true" visible="true" weight="0.34545454" />
       <window_info anchor="bottom" id="TypeScript" order="7" sideWeight="0.48696265" weight="0.32848486" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.79777366" weight="0.27272728" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
@@ -921,45 +956,45 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info id="npm" order="4" sideWeight="0.20222634" weight="0.27272728" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.5045807" visible="true" weight="0.34545454" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.79777366" visible="true" weight="0.27272728" />
       <window_info id="Structure" order="3" show_stripe_button="false" side_tool="true" weight="0.24929178" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="TODO" order="5" sideWeight="0.49964765" weight="0.32840028" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.48978153" side_tool="true" weight="0.34666666" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.5045807" visible="true" weight="0.34545454" />
       <window_info id="Grunt " order="1" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.46863988" weight="0.44" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39972898" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.3306233" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.49330515" side_tool="true" weight="0.34545454" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49541932" side_tool="true" visible="true" weight="0.34545454" />
       <window_info auto_hide="true" id="Favorites" internal_type="SLIDING" order="2" show_stripe_button="false" sideWeight="0.19911504" side_tool="true" type="SLIDING" weight="0.2967422" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.48978153" side_tool="true" weight="0.34666666" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="4" sideWeight="0.20222634" weight="0.27272728" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.50669485" weight="0.34571427" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.79777366" visible="true" weight="0.27272728" />
       <window_info id="Structure" order="3" show_stripe_button="false" side_tool="true" weight="0.24929178" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49964765" weight="0.32848486" />
       <window_info anchor="bottom" id="TypeScript" order="8" sideWeight="0.48696265" weight="0.32848486" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.46863988" weight="0.44" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.50669485" weight="0.34571427" />
+      <window_info id="Grunt " order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39972898" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.3306233" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49330515" side_tool="true" weight="0.34545454" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.4918957" side_tool="true" weight="0.34666666" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.48978153" side_tool="true" weight="0.34666666" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Grunt " order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.46863988" weight="0.44" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3306233" />
       <window_info auto_hide="true" id="Favorites" internal_type="SLIDING" order="2" show_stripe_button="false" sideWeight="0.19911504" side_tool="true" type="SLIDING" weight="0.2967422" />
     </layout-to-restore>
   </component>
@@ -1034,6 +1069,7 @@
         <option value="$PROJECT_DIR$/src/Dynamics/Joints/b2Joint.js" />
         <option value="$PROJECT_DIR$/src/Dynamics/Joints/b2WheelJoint.js" />
         <option value="$PROJECT_DIR$/src/index.spec.js" />
+        <option value="$PROJECT_DIR$/src/Dynamics/b2AppliedForce.js" />
       </list>
     </option>
   </component>
@@ -1199,18 +1235,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/src/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1220,8 +1245,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/build.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -1280,26 +1305,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dynamics/b2World.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="113" column="49" lean-forward="true" selection-start-line="113" selection-start-column="49" selection-end-line="113" selection-end-column="49" />
-          <folding>
-            <element signature="e#898#996#0" expanded="true" />
-            <element signature="e#2666#2715#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/index.ts">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Dynamics/b2Body.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -1327,8 +1338,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Dynamics/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="90">
+          <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dynamics/b2World.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="1246" lean-forward="true" selection-start-line="1246" selection-end-line="1246" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dynamics/Contacts/b2Contact.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="229" selection-start-line="229" selection-end-line="229" />
         </state>
       </provider>
     </entry>

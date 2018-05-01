@@ -1534,11 +1534,11 @@ export class B2World {
 						}
 
 						// Skip sensors.
-						// const sensorA: boolean = contact.m_fixtureA.m_isSensor;
-						// const sensorB: boolean = contact.m_fixtureB.m_isSensor;
-						// if (sensorA || sensorB) {
-						// 	continue;
-						// }
+						const sensorA: boolean = contact.m_fixtureA.m_isSensor;
+						const sensorB: boolean = contact.m_fixtureB.m_isSensor;
+						if (sensorA || sensorB) {
+							continue;
+						}
 
 						// Tentatively advance the body to the TOI.
 						const backup: B2Sweep = B2World.SolveTOI_s_backup.Copy(other.m_sweep);

@@ -226,7 +226,7 @@ export class B2Contact {
 			touching = B2TestOverlapShape(shapeA, this.m_indexA, shapeB, this.m_indexB, xfA, xfB);
 			/// }
 
-			// Sensors don't generate manifolds.
+			// Sensors DO generate manifolds.
 			this.Evaluate(this.m_manifold, xfA, xfB);
 
 		} else {

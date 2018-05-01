@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7450a8f-170a-48fd-83e1-7dc0c4d9a0eb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dynamics/Contacts/b2Contact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/Contacts/b2Contact.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dynamics/b2World.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dynamics/b2World.ts" afterDir="false" />
     </list>
     <ignored path="wwwxi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,8 +33,8 @@
       <file leaf-file-name="b2Contact.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Dynamics/Contacts/b2Contact.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="229" selection-start-line="229" selection-end-line="229" />
+            <state relative-caret-position="199">
+              <caret line="228" column="25" selection-start-line="228" selection-start-column="25" selection-end-line="228" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -924,7 +921,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="368279000" />
+    <option name="totallyTimeSpent" value="368313000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -941,10 +938,10 @@
     <layout>
       <window_info id="TODO" order="5" sideWeight="0.49964765" weight="0.32840028" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.49330515" side_tool="true" weight="0.34545454" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.503876" visible="true" weight="0.34545454" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.503876" visible="true" weight="0.34545454" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.48978153" side_tool="true" weight="0.34666666" />
       <window_info id="npm" order="4" sideWeight="0.20222634" visible="true" weight="0.27272728" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49612403" side_tool="true" visible="true" weight="0.34545454" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49612403" side_tool="true" visible="true" weight="0.34545454" />
       <window_info anchor="bottom" id="TypeScript" order="7" sideWeight="0.48696265" weight="0.32848486" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.79777366" weight="0.27272728" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
@@ -1352,8 +1349,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Dynamics/Contacts/b2Contact.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="229" selection-start-line="229" selection-end-line="229" />
+        <state relative-caret-position="199">
+          <caret line="228" column="25" selection-start-line="228" selection-start-column="25" selection-end-line="228" selection-end-column="25" />
         </state>
       </provider>
     </entry>

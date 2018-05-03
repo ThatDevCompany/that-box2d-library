@@ -127,6 +127,10 @@ export class B2ContactListener {
 	public BeginContact(contact: B2Contact): void {
 	}
 
+	///  Called when two fixtures continue to touch
+	public ContinueContact(contact: B2Contact): void {
+	}
+
 	///  Called when two fixtures cease to touch.
 	public EndContact(contact: B2Contact): void {
 	}

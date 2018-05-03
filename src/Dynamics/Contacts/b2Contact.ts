@@ -271,6 +271,10 @@ export class B2Contact {
 			listener.BeginContact(this);
 		}
 
+		if (touching && listener) {
+			listener.ContinueContact(this);
+		}
+
 		if (wasTouching && !touching && listener) {
 			listener.EndContact(this);
 		}

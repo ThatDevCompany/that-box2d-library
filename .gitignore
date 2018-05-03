@@ -3,7 +3,7 @@
 coverage
 dist
 node_modules
-script/*.js
-script/**/*.js
+scripts/*.js
+scripts/**/*.js
 src/*.js
 src/**/*.js

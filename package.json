@@ -1,7 +1,7 @@
 {
     "name": "that-box2d-library",
     "description": "A Typescript implementation of the Box2D library",
-    "version": "0.0.17",
+    "version": "0.0.18",
     "license": "MIT",
     "repository": {
         "type": "git",

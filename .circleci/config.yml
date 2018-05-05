@@ -28,13 +28,12 @@ jobs:
 
       - run: npm install
 
-
-      - run: ./node_modules/.bin/tsc scripts/tsconfig.json
-
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run: ./node_modules/.bin/tsc -p scripts/tsconfig.json
 
       # run tests!
       - run: npm test

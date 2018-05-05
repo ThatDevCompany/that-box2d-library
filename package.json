@@ -12,10 +12,11 @@
     ],
     "main": "index.js",
     "scripts": {
-        "initci": "tsc -p scripts/tsconfig.json & tsc -p src/tsconfig.json",
         "lint": "node scripts/lint.js",
+        "build:scripts": "tsc -p scripts/tsconfig.json",
+        "build:tests": "tsc -p src/tsconfig.json",
         "build": "node scripts/build.js",
-        "test": "node scripts/test.js",
+        "test": "npm run build:tests && node scripts/test.js",
         "publish": "node scripts/publish.js"
     },
     "dependencies": {

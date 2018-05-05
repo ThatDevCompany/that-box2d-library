@@ -34,7 +34,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # build in preperation for CI
-      - run: npm run initci
+      - run: npm run build:tests
 
       # run tests!
       - run: npm test

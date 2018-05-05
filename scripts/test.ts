@@ -1,7 +1,7 @@
 import {BuildUtils} from 'that-build-library';
 
-BuildUtils.tsc('src/tsconfig.json')
-	.flatMap(() => BuildUtils.exec('TESTING', 'istanbul', [
+BuildUtils
+	.exec('TESTING', 'istanbul', [
 		'cover',
 		'--config',
 		'.istanbul.yml',
@@ -9,5 +9,5 @@ BuildUtils.tsc('src/tsconfig.json')
 		'node_modules/.bin/jasmine',
 		'src/*.spec.js',
 		'src/**/*.spec.js'
-	]))
+	])
 	.subscribe();

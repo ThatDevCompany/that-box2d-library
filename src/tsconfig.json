@@ -2,8 +2,7 @@
 	"compileOnSave": true,
 	"compilerOptions": {
 		"rootDir": "./",
-		"target": "es6",
-		"module": "commonjs",
+		"target": "es5",
 		"inlineSourceMap": true,
 		"inlineSources": true,
 		"moduleResolution": "node",

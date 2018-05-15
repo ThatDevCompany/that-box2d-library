@@ -33,5 +33,9 @@ jobs:
           command: npm run build:scripts
 
       - run:
-          name: Test and Cover
-          command:  npm run test:cover
+          name: Test
+          command:  npm run test
+
+      - run:
+          name: Cover
+          command:  npm run cover

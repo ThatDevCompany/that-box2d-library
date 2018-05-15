@@ -1,7 +1,7 @@
 {
     "name": "that-box2d-library",
     "description": "A Typescript implementation of the Box2D library",
-    "version": "0.0.20",
+    "version": "0.0.21",
     "license": "MIT",
     "repository": {
         "type": "git",
@@ -16,8 +16,8 @@
         "build:scripts": "tsc -p scripts/tsconfig.json",
         "build:tests": "tsc -p src/tsconfig.json",
         "build": "node scripts/build.js",
-        "test:cover": "npm run build:tests && node scripts/test_cover.js",
         "test": "npm run build:tests && node scripts/test.js",
+        "cover": "node scripts/cover.js",
         "publish": "node scripts/publish.js"
     },
     "dependencies": {},
@@ -27,7 +27,7 @@
         "codecov": "^3.0.2",
         "jasmine": "^3.1.0",
         "nyc": "^11.7.3",
-        "that-dev-library": "^0.1.5",
+        "that-dev-library": "^0.1.6",
         "tslint": "^5.10.0",
         "typescript": "^2.8.3"
     }

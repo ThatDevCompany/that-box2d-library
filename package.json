@@ -1,7 +1,7 @@
 {
     "name": "that-box2d-library",
     "description": "A Typescript implementation of the Box2D library",
-    "version": "0.0.21",
+    "version": "0.0.22",
     "license": "MIT",
     "repository": {
         "type": "git",
@@ -27,7 +27,7 @@
         "codecov": "^3.0.2",
         "jasmine": "^3.1.0",
         "nyc": "^11.7.3",
-        "that-dev-library": "^0.1.6",
+        "that-dev-library": "^0.1.7",
         "tslint": "^5.10.0",
         "typescript": "^2.8.3"
     }

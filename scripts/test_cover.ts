@@ -2,8 +2,7 @@ import {BuildUtils} from 'that-dev-library';
 
 BuildUtils
 	.exec('TESTING', 'nyc', [
-		'--reporter', 'html',
-		'--reporter', 'text',
+		'--reporter', 'lcov',
 		'--all', 'true',
 		'--report-dir', './coverage',
 		'--temp-directory', './coverage/tmp',
@@ -13,4 +12,7 @@ BuildUtils
 		'src/*.spec.js',
 		'src/**/*.spec.js'
 	])
+	.flatMap(() => BuildUtils
+		.exec('SENDING TO CODECOV', 'codecov', [])
+	)
 	.subscribe();

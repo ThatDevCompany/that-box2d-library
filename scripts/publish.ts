@@ -1,4 +1,4 @@
-import {BuildUtils} from 'that-build-library';
+import {BuildUtils} from 'that-dev-library';
 
 BuildUtils
 	.npmPublish('dist', (pkg) => {

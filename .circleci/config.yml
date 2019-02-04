@@ -1,41 +1,62 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
+#----------------
+# JOBS
+#----------------
 jobs:
-  build:
+  #----------------
+  # JOB - CHECKOUT
+  #----------------
+  checkout:
     docker:
-      - image: circleci/node:10.0.0
+      - image: circleci/node:10
 
-    working_directory: ~/repo
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: cache-{{ .Environment.CACHE_VERSION }}-{{ checksum "package.json" }}
+
+      - run:
+          name: Installing Packages
+          command: yarn install
+
+      - save_cache:
+          key: cache-{{ .Environment.CACHE_VERSION }}-{{ checksum "package.json" }}
+          paths: node_modules
+
+  #----------------
+  # JOB - TEST
+  #----------------
+  test:
+    docker:
+      - image: circleci/node:10
 
     steps:
       - checkout
 
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+            - cache-{{ .Environment.CACHE_VERSION }}-{{ checksum "package.json" }}
 
       - run:
-          name: Install Package Dependencies
-          command: npm install
+          name: Testing
+          command: yarn run test
 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      - run:
-          name: Compile Build Scripts
-          command: npm run build:scripts
-
-      - run:
-          name: Test
-          command:  npm run test
-
-      - run:
-          name: Cover
-          command:  npm run cover
+#----------------
+# WORKFLOWS
+#----------------
+workflows:
+  version: 2
+  #----------------
+  # WORKFLOW - CI
+  #----------------
+  ci:
+    jobs:
+      - checkout:
+          filters:
+            branches:
+              only:
+                - master
+      - test:
+          requires:
+            - checkout

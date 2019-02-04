@@ -1,11 +1,19 @@
 {
+	"compileOnSave": false,
 	"compilerOptions": {
-		"target": "es5",
-		"outDir": "dist",
+		"target": "es6",
+		"module": "commonjs",
 		"sourceMap": false,
-		"declaration": true,
+		"noImplicitAny": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
 		"moduleResolution": "node",
+		"baseUrl": "./",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
 		"types": [
+			"jasmine",
 			"node"
 		],
 		"typeRoots": [
@@ -21,7 +29,6 @@
 	],
 	"exclude": [
 		"node_modules",
-		"dist",
-		"**/*.spec.ts"
+		"dist"
 	]
 }

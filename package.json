@@ -12,23 +12,22 @@
     ],
     "main": "index.js",
     "scripts": {
-        "lint": "node scripts/lint.js",
-        "build:scripts": "tsc -p scripts/tsconfig.json",
-        "build:tests": "tsc -p src/tsconfig.json",
-        "build": "node scripts/build.js",
-        "test": "npm run build:tests && node scripts/test.js",
-        "cover": "node scripts/cover.js",
-        "publish": "node scripts/publish.js"
+        "lint": "node admin/scripts/lint.js",
+        "build": "node admin/scripts/build.js",
+        "test": "node admin/scripts/test.js",
+        "publish": "node admin/scripts/publish.js"
     },
-    "dependencies": {},
+    "dependencies": {
+    },
     "devDependencies": {
-        "@types/jasmine": "^2.8.7",
-        "@types/node": "^10.0.9",
-        "codecov": "^3.0.2",
-        "jasmine": "^3.1.0",
-        "nyc": "^11.7.3",
-        "that-dev-library": "^0.1.7",
-        "tslint": "^5.10.0",
-        "typescript": "^2.8.3"
+        "@types/jasmine": "3.3.0",
+        "@types/node": "10.12.9",
+        "jasmine-core": "3.3.0",
+        "jasmine-spec-reporter": "4.2.1",
+        "nyc": "13.1.0",
+        "that-build-library": "1.0.2",
+        "ts-node": "7.0.1",
+        "tsconfig-paths": "3.7.0",
+        "typescript": "3.1.4"
     }
 }

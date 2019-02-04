@@ -18,10 +18,10 @@
 
 /// #if B2_ENABLE_PARTICLE
 
-import {B2_invalidParticleIndex} from '../Common/b2Settings';
-import {B2Clamp, B2Vec2} from '../Common/b2Math';
-import {B2Color} from '../Common/b2Draw';
-import {B2ParticleGroup} from './b2ParticleGroup';
+import { B2_invalidParticleIndex } from '../Common/b2Settings'
+import { B2Clamp, B2Vec2 } from '../Common/b2Math'
+import { B2Color } from '../Common/b2Draw'
+import { B2ParticleGroup } from './b2ParticleGroup'
 
 /**
  * The particle type. Can be combined with the | operator.
@@ -75,33 +75,39 @@ export const enum B2ParticleFlag {
 }
 
 export class B2ParticleDef {
-	flags: B2ParticleFlag = 0;
-	position: B2Vec2 = new B2Vec2();
-	velocity: B2Vec2 = new B2Vec2();
-	color: B2Color = new B2Color();
-	lifetime: number = 0.0;
-	userData: any = null;
-	group: B2ParticleGroup = null;
+	flags: B2ParticleFlag = 0
+	position: B2Vec2 = new B2Vec2()
+	velocity: B2Vec2 = new B2Vec2()
+	color: B2Color = new B2Color()
+	lifetime: number = 0.0
+	userData: any = null
+	group: B2ParticleGroup = null
 }
 
-export function B2CalculateParticleIterations(gravity: number, radius: number, timeStep: number): number {
+export function B2CalculateParticleIterations(
+	gravity: number,
+	radius: number,
+	timeStep: number
+): number {
 	// In some situations you may want more particle iterations than this,
 	// but to avoid excessive cycle cost, don't recommend more than this.
-	const B2_MAX_RECOMMENDED_PARTICLE_ITERATIONS = 8;
-	const B2_RADIUS_THRESHOLD = 0.01;
-	const iterations = Math.ceil(Math.sqrt(gravity / (B2_RADIUS_THRESHOLD * radius)) * timeStep);
-	return B2Clamp(iterations, 1, B2_MAX_RECOMMENDED_PARTICLE_ITERATIONS);
+	const B2_MAX_RECOMMENDED_PARTICLE_ITERATIONS = 8
+	const B2_RADIUS_THRESHOLD = 0.01
+	const iterations = Math.ceil(
+		Math.sqrt(gravity / (B2_RADIUS_THRESHOLD * radius)) * timeStep
+	)
+	return B2Clamp(iterations, 1, B2_MAX_RECOMMENDED_PARTICLE_ITERATIONS)
 }
 
 export class B2ParticleHandle {
-	public m_index: number = B2_invalidParticleIndex;
+	public m_index: number = B2_invalidParticleIndex
 
 	public GetIndex(): number {
-		return this.m_index;
+		return this.m_index
 	}
 
 	public SetIndex(index: number): void {
-		this.m_index = index;
+		this.m_index = index
 	}
 }
 

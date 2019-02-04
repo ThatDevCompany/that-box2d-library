@@ -1,12 +1,15 @@
 {
-	"compileOnSave": true,
+	"compileOnSave": false,
 	"compilerOptions": {
-		"rootDir": "./",
 		"target": "es5",
-		"inlineSourceMap": true,
-		"inlineSources": true,
+		"outDir": "dist",
+		"sourceMap": false,
+		"declaration": true,
 		"moduleResolution": "node",
-		"experimentalDecorators": true,
+		"baseUrl": "./",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
 		"types": [
 			"jasmine",
 			"node"
@@ -19,9 +22,12 @@
 			"dom"
 		]
 	},
+	"include": [
+		"src"
+	],
 	"exclude": [
 		"node_modules",
-		"dist",
-		"**/*.module.ts"
+		"src/testing",
+		"**/*.spec.ts"
 	]
 }

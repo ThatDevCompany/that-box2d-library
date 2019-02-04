@@ -1,9 +1,7 @@
-import {B2RevoluteJoint} from './b2RevoluteJoint';
+import { B2RevoluteJoint } from './b2RevoluteJoint'
 
 describe('B2RevoluteJoint', () => {
-
 	it('should be a function', () => {
-		expect(typeof B2RevoluteJoint).toEqual('function');
+		expect(typeof B2RevoluteJoint).toEqual('function')
 	})
-
-});
+})

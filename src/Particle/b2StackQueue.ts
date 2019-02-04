@@ -18,64 +18,67 @@
 
 /// #if B2_ENABLE_PARTICLE
 
-import {B2MakeArray} from '../Common/b2Settings';
+import { B2MakeArray } from '../Common/b2Settings'
 
-function B2Assert(condition: boolean) {
-}
+function B2Assert(condition: boolean) {}
 
 export class B2StackQueue<T> {
-	m_buffer: T[];
-	m_front: number = 0;
-	m_back: number = 0;
-	m_capacity: number = 0;
+	m_buffer: T[]
+	m_front: number = 0
+	m_back: number = 0
+	m_capacity: number = 0
 
 	constructor(capacity: number) {
-		this.m_buffer = B2MakeArray(capacity, function (index) {
-			return null;
-		});
+		this.m_buffer = B2MakeArray(capacity, function(index) {
+			return null
+		})
 		/// this.m_end = capacity; // TODO: this was wrong!
-		this.m_capacity = capacity;
+		this.m_capacity = capacity
 	}
 
 	Push(item: T): void {
 		if (this.m_back >= this.m_capacity) {
 			for (let i = this.m_front; i < this.m_back; i++) {
-				this.m_buffer[i - this.m_front] = this.m_buffer[i];
+				this.m_buffer[i - this.m_front] = this.m_buffer[i]
 			}
-			this.m_back -= this.m_front;
-			this.m_front = 0;
+			this.m_back -= this.m_front
+			this.m_front = 0
 			if (this.m_back >= this.m_capacity) {
 				if (this.m_capacity > 0) {
-					this.m_buffer.concat(B2MakeArray(this.m_capacity, function (index) {
-						return null;
-					}));
-					this.m_capacity *= 2;
+					this.m_buffer.concat(
+						B2MakeArray(this.m_capacity, function(index) {
+							return null
+						})
+					)
+					this.m_capacity *= 2
 				} else {
-					this.m_buffer.concat(B2MakeArray(1, function (index) {
-						return null;
-					}));
-					this.m_capacity = 1;
+					this.m_buffer.concat(
+						B2MakeArray(1, function(index) {
+							return null
+						})
+					)
+					this.m_capacity = 1
 				}
 				/// m_buffer = (T*) m_allocator->Reallocate(m_buffer, sizeof(T) * m_capacity);
 			}
 		}
-		this.m_buffer[this.m_back] = item;
-		this.m_back++;
+		this.m_buffer[this.m_back] = item
+		this.m_back++
 	}
 
 	Pop(): void {
-		B2Assert(this.m_front < this.m_back);
-		delete this.m_buffer[this.m_front];
-		this.m_front++;
+		B2Assert(this.m_front < this.m_back)
+		delete this.m_buffer[this.m_front]
+		this.m_front++
 	}
 
 	Empty(): boolean {
-		B2Assert(this.m_front <= this.m_back);
-		return this.m_front === this.m_back;
+		B2Assert(this.m_front <= this.m_back)
+		return this.m_front === this.m_back
 	}
 
 	Front(): T {
-		return this.m_buffer[this.m_front];
+		return this.m_buffer[this.m_front]
 	}
 }
 

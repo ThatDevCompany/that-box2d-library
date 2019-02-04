@@ -1,1 +1,1 @@
-export * from './b2Rope';
+export * from './b2Rope'

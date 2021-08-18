@@ -1,11 +1,11 @@
-const BuildUtils = require('that-build-library').BuildUtils
+const BuildUtils = require("that-build-library").BuildUtils;
 
 module.exports = Promise.resolve()
 
-	.then(() => BuildUtils.echo('Testing'))
-	.then(() =>
-		// prettier-ignore
-		BuildUtils.exec('nyc', [
+  .then(() => BuildUtils.echo("Testing"))
+  .then(() =>
+    // prettier-ignore
+    spa('nyc', [
 			'--reporter', 'html',
 			'--reporter', 'text',
 			'--reporter', 'lcov',
@@ -32,8 +32,8 @@ module.exports = Promise.resolve()
 			'node_modules/.bin/jasmine',
 			'src/**/*.spec.ts'
 		])
-	)
-	.catch(e => {
-		console.error('An error occurred during unit testing', e)
-		process.exit(1)
-	})
+  )
+  .catch((e) => {
+    console.error("An error occurred during unit testing", e);
+    process.exit(1);
+  });

@@ -1,33 +1,25 @@
 {
-	"compileOnSave": false,
+	"compileOnSave": true,
 	"compilerOptions": {
-		"target": "es5",
-		"outDir": "dist",
+		"target": "es6",
+		"module": "commonjs",
 		"sourceMap": false,
-		"declaration": true,
+		"noImplicitAny": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
 		"moduleResolution": "node",
 		"baseUrl": "./",
-		"paths": {
-			"@/*": ["./src/*"]
-		},
-		"types": [
-			"jasmine",
-			"node"
-		],
+		"types": ["jest", "node"],
 		"typeRoots": [
 			"node_modules/@types"
 		],
-		"lib": [
-			"es2017",
-			"dom"
-		]
+		"lib": ["esnext", "dom"]
 	},
 	"include": [
-		"src"
+		"."
 	],
 	"exclude": [
 		"node_modules",
-		"src/testing",
-		"**/*.spec.ts"
+		"dist"
 	]
 }

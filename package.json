@@ -18,6 +18,6 @@
     },
     "dependencies": {},
     "devDependencies": {
-        "that-dev-library": "0.0.11"
+        "that-dev-library": "0.3.1"
     }
 }

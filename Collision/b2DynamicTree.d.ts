@@ -1,0 +1,54 @@
+import { B2Vec2 } from '../Common/b2Math';
+import { B2GrowableStack } from '../Common/b2GrowableStack';
+import { B2AABB, B2RayCastInput } from './b2Collision';
+export declare class B2TreeNode {
+    m_id: number;
+    aabb: B2AABB;
+    userData: any;
+    parent: B2TreeNode;
+    child1: B2TreeNode;
+    child2: B2TreeNode;
+    height: number;
+    constructor(id?: number);
+    IsLeaf(): boolean;
+}
+export declare class B2DynamicTree {
+    m_root: B2TreeNode;
+    m_freeList: B2TreeNode;
+    m_path: number;
+    m_insertionCount: number;
+    static s_stack: B2GrowableStack;
+    static s_r: B2Vec2;
+    static s_v: B2Vec2;
+    static s_abs_v: B2Vec2;
+    static s_segmentAABB: B2AABB;
+    static s_subInput: B2RayCastInput;
+    static s_combinedAABB: B2AABB;
+    static s_aabb: B2AABB;
+    GetUserData(proxy: B2TreeNode): any;
+    GetFatAABB(proxy: B2TreeNode): B2AABB;
+    Query(callback: (node: B2TreeNode) => boolean, aabb: B2AABB): void;
+    RayCast(callback: (input: B2RayCastInput, node: B2TreeNode) => number, input: B2RayCastInput): void;
+    static s_node_id: number;
+    AllocateNode(): B2TreeNode;
+    FreeNode(node: B2TreeNode): void;
+    CreateProxy(aabb: B2AABB, userData: any): B2TreeNode;
+    DestroyProxy(proxy: B2TreeNode): void;
+    MoveProxy(proxy: B2TreeNode, aabb: B2AABB, displacement: B2Vec2): boolean;
+    InsertLeaf(leaf: B2TreeNode): void;
+    RemoveLeaf(leaf: B2TreeNode): void;
+    Balance(A: B2TreeNode): B2TreeNode;
+    GetHeight(): number;
+    private static GetAreaNode;
+    GetAreaRatio(): number;
+    ComputeHeightNode(node: B2TreeNode): number;
+    ComputeHeight(): number;
+    ValidateStructure(index: B2TreeNode): void;
+    ValidateMetrics(index: B2TreeNode): void;
+    Validate(): void;
+    private static GetMaxBalanceNode;
+    GetMaxBalance(): number;
+    RebuildBottomUp(): void;
+    private static ShiftOriginNode;
+    ShiftOrigin(newOrigin: B2Vec2): void;
+}

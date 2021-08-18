@@ -1,0 +1,10 @@
+.eslintrc.js
+*.ts
+*.tsx
+*.test.d.js
+*.test.js
+*.test.jsx
+!*.d.ts
+tsconfig.json
+tests
+node_modules

@@ -1,12 +1,10 @@
 {
 	"compileOnSave": false,
 	"compilerOptions": {
-		"target": "es6",
-		"module": "commonjs",
+		"target": "es5",
+		"outDir": "dist",
 		"sourceMap": false,
-		"noImplicitAny": false,
-		"emitDecoratorMetadata": true,
-		"experimentalDecorators": true,
+		"declaration": true,
 		"moduleResolution": "node",
 		"baseUrl": "./",
 		"paths": {
@@ -29,6 +27,7 @@
 	],
 	"exclude": [
 		"node_modules",
-		"dist"
+		"src/testing",
+		"**/*.spec.ts"
 	]
 }
